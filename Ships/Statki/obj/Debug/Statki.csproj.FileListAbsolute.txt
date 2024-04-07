@@ -26,3 +26,10 @@ C:\Users\jajpl\Desktop\Statki — kopia\Statki\obj\Debug\Statki.csproj.AssemblyR
 C:\Users\jajpl\Desktop\Statki — kopia\Statki\obj\Debug\Statki.csproj.CoreCompileInputs.cache
 C:\Users\jajpl\Desktop\Statki — kopia\Statki\obj\Debug\Statki.exe
 C:\Users\jajpl\Desktop\Statki — kopia\Statki\obj\Debug\Statki.pdb
+C:\Users\jajpl\Desktop\Ships\Statki\obj\Debug\Statki.csproj.AssemblyReference.cache
+C:\Users\jajpl\Desktop\Ships\Statki\obj\Debug\Statki.csproj.CoreCompileInputs.cache
+C:\Users\jajpl\Desktop\Ships\Statki\obj\Debug\Statki.exe
+C:\Users\jajpl\Desktop\Ships\Statki\obj\Debug\Statki.pdb
+C:\Users\jajpl\Desktop\Ships\Statki\bin\Debug\Statki.exe.config
+C:\Users\jajpl\Desktop\Ships\Statki\bin\Debug\Statki.exe
+C:\Users\jajpl\Desktop\Ships\Statki\bin\Debug\Statki.pdb

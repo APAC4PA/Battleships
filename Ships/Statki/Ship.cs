@@ -21,12 +21,7 @@ namespace Statki
         }
         public void InsertShips(out int x, out int y, out int shipSelection, out int rotationSelection)
         {
-            shipSelection = 0;
-            rotationSelection = 0;
             bool wrongOption = false;
-
-            x = 0;
-            y = 0;
 
             Console.WriteLine("Please select:   1 - horizontal    2 - vertical");
             do
