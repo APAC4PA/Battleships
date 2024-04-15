@@ -1,0 +1,7 @@
+C:\Users\jajpl\source\repos\Battleships\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\jajpl\source\repos\Battleships\Battleships\bin\Debug\Battleships.exe
+C:\Users\jajpl\source\repos\Battleships\Battleships\bin\Debug\Battleships.pdb
+C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.exe
+C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.pdb
