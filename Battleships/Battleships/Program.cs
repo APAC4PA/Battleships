@@ -56,7 +56,7 @@ namespace Battleships {
 				rounds++;
 			}
 			player.boardShips.ShowBoard();
-			if (getNumberOfHits[0] == 2 0) {
+			if (getNumberOfHits[0] == 20) {
 				Console.WriteLine("Winner");
                 Console.ReadLine();
                 rounds = -1;
