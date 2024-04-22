@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Battleships
 {
@@ -18,6 +14,14 @@ namespace Battleships
             { 0, -1 }, { 0, 1 },
             { 1, -1 }, { 1, 0 }, { 1, 1 }
         };
+
+        public int[] shipsToPlace = { 4, 3, 2, 1 };
+
+        public string name;
+        public Player(string name)
+        {
+            this.name = name;
+        }
 
         public bool PlayerStrikeShips(char[,] board)
         {
@@ -80,7 +84,7 @@ namespace Battleships
                     wrongMove = true;
                     continue;
                 }
-                                                                                                                     
+
                 if (strikes.board[strikesY, strikesX] == 'X' || strikes.board[strikesY, strikesX] == '@')
                 {
                     Console.WriteLine("This cell has already been hit. Enter other coordinates.");
@@ -116,13 +120,11 @@ namespace Battleships
                 return false;
             }
         }
-        public bool PlaceShips(int getShipSelection, int getRotationSelection, int coordinateY, int coordinateX)
+        public bool PlaceShips(int shipSize, int shipRotation, int coordinateY, int coordinateX)
         {
-            bool wrongOption = false;
-
-            if (getRotationSelection == 1)
+            if (shipRotation == 1)
             {
-                if (getShipSelection == 1)
+                if (shipSize == 1)
                 {
                     if (boardShips.board[coordinateY, coordinateX] != 'O' && boardShips.board[coordinateY, coordinateX] != '#')
                     {
@@ -140,41 +142,43 @@ namespace Battleships
 
                             boardShips.board[verticalCoordinates, horizontalCoordinates] = 'O';
                         }
+                            shipsToPlace[shipSize - 1]--;
                     }
                     else
                     {
                         Console.WriteLine("You cannot place a ship in a space that contains another ship");
-                        SelectShips.InsertShips(out coordinateX, out coordinateY, out getShipSelection, out getRotationSelection);
-                        wrongOption = true;
+                        //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
+                        return true;
                     }
                 }
-                else if (getShipSelection <= 4 && getShipSelection > 1)
+                else if (shipSize <= 4 && shipSize > 1)
                 {
-                    if (coordinateX + getShipSelection > 11)
+                    if (coordinateX + shipSize > 11)
                     {
                         Console.WriteLine("X exceeds the width of the board");
-                        Console.WriteLine("Please enter a valid value");
-                        SelectShips.InsertShips(out coordinateX, out coordinateY, out getShipSelection, out getRotationSelection);
-                        wrongOption = true;
+                        //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
+                        return true;
                     }
                     else if (coordinateX <= 10 && coordinateX >= 1)
                     {
-
-                        for (int j = 0; j < getShipSelection; j++)
+                        for (int j = 0; j < shipSize; j++)
                         {
                             if (boardShips.board[coordinateY, coordinateX + j] == 'O' || boardShips.board[coordinateY, coordinateX + j] == '#')
                             {
                                 canPlaceShip = false;
                                 Console.WriteLine("You cannot place a ship on a space with an 'O'");
+                                //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
+                                return true;
                             }
                         }
+
                         if (!canPlaceShip)
                         {
-                            SelectShips.InsertShips(out coordinateX, out coordinateY, out getShipSelection, out getRotationSelection);
+                            //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
                         }
 
                         // surround the ship with 'O' to prevent placing another ship next to it
-                        for (int j = 0; j < getShipSelection; j++)
+                        for (int j = 0; j < shipSize; j++)
                         {
                             boardShips.board[coordinateY, coordinateX + j] = '#';
 
@@ -191,12 +195,13 @@ namespace Battleships
                                 boardShips.board[verticalCoordinates, horizontalCoordinates] = 'O';
                             }
                         }
+                        shipsToPlace[shipSize - 1]--;
                     }
                 }
             }
-            if (getRotationSelection == 2)
+            if (shipRotation == 2)
             {
-                if (getShipSelection == 1)
+                if (shipSize == 1)
                 {
                     if (boardShips.board[coordinateY, coordinateX] != 'O' && boardShips.board[coordinateY, coordinateX] != '#')
                     {
@@ -214,42 +219,43 @@ namespace Battleships
 
                             boardShips.board[verticalCoordinates, horizontalCoordinates] = 'O';
                         }
+                        shipsToPlace[shipSize - 1]--;
                     }
                     else
                     {
                         Console.WriteLine("You cannot place a ship in a space that contains another ship");
-                        SelectShips.InsertShips(out coordinateX, out coordinateY, out getShipSelection, out getRotationSelection);
-                        wrongOption = true;
+                        //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
+                        return true;
                     }
                 }
-
-                else if (getShipSelection <= 4 && getShipSelection > 1)
+                else if (shipSize <= 4 && shipSize > 1)
                 {
-                    if (coordinateY + getShipSelection > 11)
+                    if (coordinateY + shipSize > 11)
                     {
                         Console.WriteLine("Y exceeds the width of the board");
-                        Console.WriteLine("Please enter a valid value");
-                        SelectShips.InsertShips(out coordinateX, out coordinateY, out getShipSelection, out getRotationSelection);
-                        wrongOption = true;
+                        //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
+                        return true;
                     }
                     else if (coordinateX <= 10 && coordinateX >= 1)
                     {
 
-                        for (int j = 0; j < getShipSelection; j++)
+                        for (int j = 0; j < shipSize; j++)
                         {
                             if (boardShips.board[coordinateY + j, coordinateX] == 'O' || boardShips.board[coordinateY + j, coordinateX] == '#')
                             {
                                 canPlaceShip = false;
                                 Console.WriteLine("You cannot place a ship on a space with an 'O'");
+                                //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
+                                return true;
                             }
                         }
                         if (!canPlaceShip)
                         {
-                            SelectShips.InsertShips(out coordinateX, out coordinateY, out getShipSelection, out getRotationSelection);
+                            //SelectShips.InsertShips(out coordinateX, out coordinateY, out shipSize, out shipRotation, this);
                         }
 
                         // surround the ship with 'O' to prevent placing another ship next to it
-                        for (int j = 0; j < getShipSelection; j++)
+                        for (int j = 0; j < shipSize; j++)
                         {
                             boardShips.board[coordinateY + j, coordinateX] = '#';
 
@@ -266,10 +272,11 @@ namespace Battleships
                                 boardShips.board[verticalCoordinates, horizontalCoordinates] = 'O';
                             }
                         }
+                        shipsToPlace[shipSize - 1]--;
                     }
                 }
             }
-        return wrongOption;
+            return false;
         }
     }
 }

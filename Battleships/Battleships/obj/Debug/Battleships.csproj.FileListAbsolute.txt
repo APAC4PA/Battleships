@@ -5,3 +5,17 @@ C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.csproj
 C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
 C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.exe
 C:\Users\jajpl\source\repos\Battleships\Battleships\obj\Debug\Battleships.pdb
+C:\Users\dominik\Desktop\projects\Battleships\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\dominik\Desktop\projects\Battleships\Battleships\bin\Debug\Battleships.exe
+C:\Users\dominik\Desktop\projects\Battleships\Battleships\bin\Debug\Battleships.pdb
+C:\Users\dominik\Desktop\projects\Battleships\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\dominik\Desktop\projects\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\dominik\Desktop\projects\Battleships\Battleships\obj\Debug\Battleships.exe
+C:\Users\dominik\Desktop\projects\Battleships\Battleships\obj\Debug\Battleships.pdb
+C:\Users\jajpl\Desktop\Battleships\Battleships\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\jajpl\Desktop\Battleships\Battleships\Battleships\bin\Debug\Battleships.exe
+C:\Users\jajpl\Desktop\Battleships\Battleships\Battleships\bin\Debug\Battleships.pdb
+C:\Users\jajpl\Desktop\Battleships\Battleships\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\jajpl\Desktop\Battleships\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\jajpl\Desktop\Battleships\Battleships\Battleships\obj\Debug\Battleships.exe
+C:\Users\jajpl\Desktop\Battleships\Battleships\Battleships\obj\Debug\Battleships.pdb
