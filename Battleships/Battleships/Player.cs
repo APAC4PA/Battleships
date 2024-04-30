@@ -36,9 +36,11 @@ namespace Battleships
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("Enter the cell you want to shoot at");
+            
             do
             {
+wrongMove = false;
+Console.WriteLine("Enter the cell you want to shoot at");
                 Console.WriteLine("Column: ");
                 string xValue = Console.ReadLine();
                 switch (xValue.ToUpper())
@@ -73,12 +75,16 @@ namespace Battleships
                     case "J":
                         strikesX = 10;
                         break;
+default:
+wrongMove = true;
+break;
                 }
                 Console.WriteLine("Row: ");                                 //Ask for coordinates
-                strikesY = Convert.ToInt32(Console.ReadLine());
-                wrongMove = false;
-
-                if (strikesX < 0 || strikesX > 10 || strikesY < 0 || strikesY > 10)
+                strikesY = Convert.ToInt32(Console.ReadLine());
+if(wrongMove == true){
+Console.WriteLine("Invalid option");
+}
+                if (strikesY < 0 || strikesY > 10)
                 {
                     Console.WriteLine("Invalid coordinates entered. Please re-enter.");
                     wrongMove = true;
