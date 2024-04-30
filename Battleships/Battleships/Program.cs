@@ -71,7 +71,7 @@ namespace Battleships {
 					PlacingTurn(Player1);
 				} else if (placingShips <= 20) {
 					PlacingTurn(Player2);
-if(placingShips == 20){
+if(placingShips > 20){
 Console.Clear();
      Console.WriteLine("Press Enter");
      Console.WriteLine("Switch places with opponent");
