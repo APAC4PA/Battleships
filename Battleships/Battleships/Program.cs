@@ -71,6 +71,10 @@ namespace Battleships {
 				} else if (placingShips <= 20) {
 					PlacingTurn(Player2);
 				} else {
+     Console.Clear();
+     Console.WriteLine("Press Enter");
+     Console.ReadLine();
+     Console.Clear();
 					if (rounds % 2 == 1) {
 						ShootingTurn(Player1, Player2);
 					} else if(rounds % 2 != 1) {
