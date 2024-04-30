@@ -52,7 +52,7 @@ namespace Battleships {
 				Console.ReadLine();
 				Console.Clear();
 				Console.WriteLine("Press Enter");
-    Console.WriteLine("Switch with second player");
+    Console.WriteLine("Switch places with opponent");
 				Console.ReadLine();
 				rounds++;
 			}
@@ -74,7 +74,7 @@ namespace Battleships {
 				} else {
      Console.Clear();
      Console.WriteLine("Press Enter");
-     Console.WriteLine("Switch with second player);
+     Console.WriteLine("Switch places with opponent");
      Console.ReadLine();
      Console.Clear();
 					if (rounds % 2 == 1) {
